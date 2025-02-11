@@ -60,7 +60,7 @@ mobilenumber(number)
 def validate_password():
     password = input("Enter your password: ")
     # rule 1: minimum 8 characters
-    pattern = "^[A-Z][a-z].{8,}$"
+    pattern = r"^.{8,}$"
     if re.match(pattern, password):
         print("Valid Password")
     else:
