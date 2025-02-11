@@ -40,3 +40,16 @@ def valid_Email():
   else:
     print("Not a valid email")
 valid_Email()
+
+
+
+
+def mobilenumber(mobile_number):
+  pattern="^(91)()[6-9]{1}[0-9]{9}$"
+  
+  if re.match(pattern,mobile_number):
+    print("Valid mobile number")
+  else:
+    print("Not a valid number")
+number=input("Enter your phone number:")
+mobilenumber(number)
