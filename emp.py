@@ -27,3 +27,16 @@ def valid_LastName(last_name):
     print("It is not a valid name")
 last_name=input("Enter your name:")
 valid_LastName(last_name)
+
+
+
+def valid_Email():
+  pattern=r"^[a-zA-Z0-9]+(\.[a-zA-Z0-9]+)?@[a-zA-Z0-9]+\.[a-zA-Z]{2,}(\.[a-zA-Z]{2,})?$"
+  
+  email=input("Enter your email:")
+  
+  if re.match(pattern,email):
+    print("Valid email")
+  else:
+    print("Not a valid email")
+valid_Email()
