@@ -56,7 +56,6 @@ mobilenumber(number)
 
 
 
-
 def validate_password():
     password = input("Enter your password: ")
     # rule 1: minimum 8 characters
@@ -66,7 +65,6 @@ def validate_password():
     else:
         print("Invalid Password (Must be at least 8 characters long)")
 validate_password()
-
 
 
 def PasswordUppercase(password):
@@ -85,7 +83,6 @@ PasswordUppercase(password)
 
 
 
-
 def passwordNumeric():
   
   # Rule 3:at least 1 numeric number
@@ -97,3 +94,18 @@ def passwordNumeric():
   else:
     print("Not a valid passowrd")
 passwordNumeric()
+
+
+
+
+def specialCharacter(password):
+  
+  # rule 4 : atleast 1 special Character
+  pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[^a-zA-Z0-9]).{8,}$"
+  
+  if re.match(pattern,password):
+    print("It is correct")
+  else:
+    print("It is not correct")
+password=input("Enter the password:")
+specialCharacter(password)  
