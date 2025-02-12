@@ -66,3 +66,17 @@ def validate_password():
     else:
         print("Invalid Password (Must be at least 8 characters long)")
 validate_password()
+
+
+
+def PasswordUppercase(password):
+  
+  pattern=r"^(?=.*[A-Z]).{8,}$"
+  
+  if re.match(pattern,password):
+    print("It is correct")
+  else:
+    print("It is not correct")
+
+password=input("Enter the password:")
+PasswordUppercase(password)  
