@@ -71,6 +71,7 @@ validate_password()
 
 def PasswordUppercase(password):
   
+  # rule 2: least 1 Upper Case
   pattern=r"^(?=.*[A-Z]).{8,}$"
   
   if re.match(pattern,password):
@@ -80,3 +81,19 @@ def PasswordUppercase(password):
 
 password=input("Enter the password:")
 PasswordUppercase(password)  
+
+
+
+
+
+def passwordNumeric():
+  
+  # Rule 3:at least 1 numeric number
+  pattern=r"^(?=.*[A-Z])(?=.*\d).{8,}$"
+  password=input("Enter a password:")
+  
+  if re.match(pattern,password):
+    print("valid password")
+  else:
+    print("Not a valid passowrd")
+passwordNumeric()
